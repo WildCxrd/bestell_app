@@ -68,11 +68,13 @@
 .meal_card_text_wrapper>h3 {
     font-weight: 600;
     font-size: 1.5rem;
+    line-height: 100%;
 }
 
 .meal_card_text_wrapper>p {
     font-weight: 600;
     font-size: 1rem;
+    line-height: 120%;
 }
 
 .meal_card_transaction_wrapper {
@@ -134,10 +136,6 @@
     .meal_card_text_wrapper>h3 {
         font-size: 1.5rem;
         line-height: 100%;
-    }
-
-    .meal_card_text_wrapper>p {
-        line-height: 120%;
     }
 
     .meal_card_transaction_wrapper {

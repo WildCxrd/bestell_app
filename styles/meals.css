@@ -24,8 +24,7 @@
 }
 
 .meals_wrapper {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 2em max(2em, calc(50% - 720px));
 
     display: flex;
     flex-direction: column;
@@ -46,14 +45,18 @@
 
 .meal_card>img {
     height: 120px;
-    width: 205px;
+    width: 200px;
 
     border-radius: 12px;
 
     object-fit: cover;
 }
 
-.meal_card_text_wrapper {}
+.meal_card_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 .meal_card_text_wrapper>h3 {
     font-weight: 600;
@@ -90,4 +93,45 @@
 
     padding: 5px 8px;
     border-radius: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .meal_category_header>h2 {
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+        margin: unset;
+    }
+
+    .meal_category_header>img {
+        height: 60px;
+        width: 60px;
+
+        position: absolute;
+        top: -45px;
+        left: calc(50% - 30px);
+    }
+
+    .meal_card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .meal_card>img {
+        width: 100%;
+    }
+
+    .meal_card_text_wrapper>h3 {
+        font-size: 1.5rem;
+        line-height: 100%;
+    }
+
+    .meal_card_text_wrapper>p {
+        line-height: 120%;
+    }
+
+    .meal_card_transaction_wrapper {
+        flex-direction: row;
+    }
 }

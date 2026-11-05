@@ -1,0 +1,79 @@
+.hero_image_wrapper {
+    height: 500px;
+
+    background-image: url("../assets/img/hero-photo.jpg");
+    background-size: cover;
+
+    position: relative
+}
+
+.burger_house_logo {
+    height: 200px;
+    width: 200px;
+
+    border: 13px solid rgba(253, 234, 220, 1);
+    border-radius: 100px;
+
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(100% - 130px);
+}
+
+.hero_text_wrapper {
+    color: var(--light-black-color);
+
+    padding: 80px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero_text_wrapper>p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hero_headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.hero_headline h1 {
+    font-family: 'Palanquin Dark';
+    font-size: 3rem;
+
+    line-height: 120%;
+}
+
+.hero_headline span {
+    color: var(--bestell-app-orange);
+}
+
+.ratings_wrapper {
+    height: fit-content;
+    background-color: var(--background-orange);
+
+    padding: 0px 5px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ratings_star_img {
+    height: 23px;
+    width: 24px;
+}
+
+.ratings_grade_text {
+    font-size: 1.25rem;
+}
+
+.ratings_total_count_text {
+    font-size: 1.125rem;
+    opacity: 0.5;
+}

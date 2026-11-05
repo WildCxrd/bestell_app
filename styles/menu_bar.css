@@ -1,0 +1,28 @@
+.mobile_menu_bar {
+    width: 100%;
+
+    background-color: var(--ligh-black-color);
+
+    padding: 2em;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.mobile_menu_bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile_menu_bar a>img {
+    height: 30px;
+    width: 30px;
+}
+
+
+@media screen and (min-width: 426px) {
+    .mobile_menu_bar {
+        display: none;
+    }
+}

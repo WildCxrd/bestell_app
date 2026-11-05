@@ -15,7 +15,7 @@ body {
 }
 
 .content_section{
-    margin: 0px calc(50% - 720px);
+    padding: 0px calc(50% - 720px);;
 }
 
 .page_footer {

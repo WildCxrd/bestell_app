@@ -24,8 +24,8 @@
 }
 
 .meals_wrapper {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
 
     display: flex;
     flex-direction: column;

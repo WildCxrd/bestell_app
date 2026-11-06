@@ -33,7 +33,7 @@
 
 .meal_card {
     height: 150px;
-    width: 725px;
+    width: min(725px, 100%);
     background-color: rgba(231, 108, 31, 0.3);
 
     padding: 10px;
@@ -60,6 +60,8 @@
 }
 
 .meal_card_text_wrapper {
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -124,11 +126,6 @@
         left: calc(50% - 30px);
     }
 
-    .meal_card {
-        width: 100%;
-        flex-direction: column;
-    }
-
     .meal_card>img {
         width: 100%;
     }
@@ -137,8 +134,25 @@
         font-size: 1.5rem;
         line-height: 100%;
     }
+}
+
+@media screen and (max-width: 660px) {
+    .meal_card {
+        height: auto;
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .meal_card_img_wrapper {
+        height: 86px;
+        width: 100%;
+    }
 
     .meal_card_transaction_wrapper {
+        width: 100%;
+
         flex-direction: row;
+        justify-content: space-between;
     }
 }

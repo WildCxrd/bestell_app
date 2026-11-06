@@ -34,6 +34,11 @@ body {
     gap: 72px;
 }
 
+@media screen and (max-width: 660px) {
+    .burger_menu {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 425px) {
     .page_footer {

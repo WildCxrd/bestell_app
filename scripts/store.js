@@ -26,7 +26,9 @@ function renderBasket() {
 
     allMealsInLocalStorage.forEach(meal => {
         subtotal += meal.price * meal.amountInBasket;
-        basketProductCardsWrapper.innerHTML += getBasketProductCardTemplate(meal.id, meal.name, meal.amountInBasket, formatPriceToEuros(meal.price));
+        const lowerMealAmountButtonImgSrcAndAlt = getLowerMealAmountButtonImgSrAndAlt(meal.amountInBasket);
+        basketProductCardsWrapper.innerHTML += getBasketProductCardTemplate(meal.id, meal.name, meal.amountInBasket, 
+            formatPriceToEuros(meal.price), lowerMealAmountButtonImgSrcAndAlt[0], lowerMealAmountButtonImgSrcAndAlt[1]);
     });
 
     setBasketAmountTexts(subtotal);
@@ -75,6 +77,15 @@ function removeMealFromBasket(mealId) {
         }
 
         renderBasket();
+    }
+}
+
+function getLowerMealAmountButtonImgSrAndAlt(mealAmountInBasket) {
+    if (mealAmountInBasket > 1) {
+        return ["assets/icons/minus.svg", "A minus."];
+    }
+    else {
+        return ["assets/icons/delete.svg", "A trash bin."];
     }
 }
 

@@ -33,7 +33,7 @@ function getMealTemplate(mealId, imgSrc, imgAlt, name, description, price) {
     `;
 }
 
-function getBasketProductCardTemplate(mealId, mealName, amountInBasket, price) {
+function getBasketProductCardTemplate(mealId, mealName, amountInBasket, price, lowerMealAmountButtonImgSrc, lowerMealAmountButtonImgAlt) {
     return `
         <div id="product_${mealId}" class="basket_product_card">
             <header class="basket_product_card_header">
@@ -43,11 +43,11 @@ function getBasketProductCardTemplate(mealId, mealName, amountInBasket, price) {
             <div class="basket_product_card_content_wrapper">
                 <div class="basket_product_card_meal_amount_wrapper">
                     <button id="lowerMealAmountButton" class="meal_amount_button" onclick="removeMealFromBasket('${mealId}')">
-                        <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                        <img id="lowerMealAmountButtonImg" src="${lowerMealAmountButtonImgSrc}" alt="${lowerMealAmountButtonImgAlt}">
                     </button>
                     <p id="mealAmount">${amountInBasket}</p>
                     <button id="raiseMealAmountButton" class="meal_amount_button" onclick="addMealToBasket('${mealId}')">
-                        <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                        <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="A plus.">
                     </button>
                 </div>
 

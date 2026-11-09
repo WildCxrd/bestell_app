@@ -43,7 +43,8 @@
 .meal_card {
     height: 150px;
     width: min(725px, 100%);
-    background-color: rgba(231, 108, 31, 0.3);
+    background-color: rgba(253, 234, 220, 1);
+
 
     padding: 10px;
 

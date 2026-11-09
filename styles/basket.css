@@ -1,0 +1,135 @@
+#basketProductCardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding-right: 10px;
+
+    flex: 1;
+    overflow-y: auto;
+}
+
+#basketProductCardHeading {
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+#mealAmount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+#basketProductCardPrice {
+    font-size: 1.375rem;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+#basketPayButton {
+    all: unset;
+
+    color: white;
+    background-color: var(--bestell-app-orange);
+
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 60px;
+}
+
+.basket {
+    height: 800px;
+    width: 435px;
+
+    background-color: var(--ligh-black-color);
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    position: sticky;
+    top: 0px;
+    left: calc(100% - 435px);
+
+    z-index: 99;
+}
+
+.basket_content_wrapper {
+    height: 100%;
+    width: 100%;
+
+    padding: 60px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.basket_heading {
+    color: var(--basket-beige-color);
+
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.basket_product_card {
+    width: 100%;
+
+    background-color: var(--basket-beige-color);
+
+    padding: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.basket_product_card_content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basket_product_card_meal_amount_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.meal_amount_button {
+    all: unset;
+
+    width: 13px;
+
+    display: flex;
+
+    cursor: pointer;
+}
+
+.basket_amounts {
+    color: white;
+}
+
+.basket_amounts>hr {
+    border: 2px solid white;
+    margin: 10px 0px;
+}
+
+.basket_amount_wrapper {
+    font-size: 1.5rem;
+    line-height: 120%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 1441px) {
+    .basket {
+        left: calc((50% + 720px) - 435px);
+    }
+}

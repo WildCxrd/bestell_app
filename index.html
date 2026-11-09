@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/meals.css">
     <link rel="stylesheet" href="styles/menu_bar.css">
+    <link rel="stylesheet" href="styles/basket.css">
+    <link rel="stylesheet" href="styles/scrollbar.css">
 
     <script src="scripts/db.js"></script>
     <script src="scripts/templates.js"></script>
@@ -47,6 +49,116 @@
                 <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
             </div>
         </section>
+
+        <div class="basket">
+            <div class="basket_content_wrapper">
+                <header>
+                    <h2 class="basket_heading">Your Basket</h2>
+                </header>
+
+                <div id="basketProductCardsWrapper">
+
+                    <div class="basket_product_card">
+                        <header class="basket_product_card_header">
+                            <h3 id="basketProductCardHeading">Dummy meal with a very long name</h3>
+                        </header>
+
+                        <div class="basket_product_card_content_wrapper">
+                            <div class="basket_product_card_meal_amount_wrapper">
+                                <button id="lowerMealAmountButton" class="meal_amount_button">
+                                    <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                                </button>
+                                <p id="mealAmount">1</p>
+                                <button id="raiseMealAmountButton" class="meal_amount_button">
+                                    <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                                </button>
+                            </div>
+
+                            <p id="basketProductCardPrice">16,90€</p>
+                        </div>
+                    </div>
+
+                    <div class="basket_product_card">
+                        <header class="basket_product_card_header">
+                            <h3 id="basketProductCardHeading">Dummy meal with a very long name</h3>
+                        </header>
+
+                        <div class="basket_product_card_content_wrapper">
+                            <div class="basket_product_card_meal_amount_wrapper">
+                                <button id="lowerMealAmountButton" class="meal_amount_button">
+                                    <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                                </button>
+                                <p id="mealAmount">1</p>
+                                <button id="raiseMealAmountButton" class="meal_amount_button">
+                                    <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                                </button>
+                            </div>
+
+                            <p id="basketProductCardPrice">16,90€</p>
+                        </div>
+                    </div>
+
+                    <div class="basket_product_card">
+                        <header class="basket_product_card_header">
+                            <h3 id="basketProductCardHeading">Dummy meal with a very long name</h3>
+                        </header>
+
+                        <div class="basket_product_card_content_wrapper">
+                            <div class="basket_product_card_meal_amount_wrapper">
+                                <button id="lowerMealAmountButton" class="meal_amount_button">
+                                    <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                                </button>
+                                <p id="mealAmount">1</p>
+                                <button id="raiseMealAmountButton" class="meal_amount_button">
+                                    <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                                </button>
+                            </div>
+
+                            <p id="basketProductCardPrice">16,90€</p>
+                        </div>
+                    </div>
+
+                    <div class="basket_product_card">
+                        <header class="basket_product_card_header">
+                            <h3 id="basketProductCardHeading">Dummy meal with a very long name</h3>
+                        </header>
+
+                        <div class="basket_product_card_content_wrapper">
+                            <div class="basket_product_card_meal_amount_wrapper">
+                                <button id="lowerMealAmountButton" class="meal_amount_button">
+                                    <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                                </button>
+                                <p id="mealAmount">1</p>
+                                <button id="raiseMealAmountButton" class="meal_amount_button">
+                                    <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                                </button>
+                            </div>
+
+                            <p id="basketProductCardPrice">16,90€</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="basket_amounts">
+                    <div class="basket_amount_wrapper">
+                        <p>Subtotal</p>
+                        <p id="subtotalText">x,y€</p>
+                    </div>
+                    <div class="basket_amount_wrapper">
+                        <p>Delivery fee</p>
+                        <p id="deliveryFeeText">x,y€</p>
+                    </div>
+                    <hr>
+                    <div class="basket_amount_wrapper">
+                        <p>Total</p>
+                        <p id="totalText">x,y€</p>
+                    </div>
+                </div>
+
+                <button id="basketPayButton">Buy now (x,y€)</button>
+            </div>
+        </div>
 
         <section id="mealCategoriesSection">
         </section>

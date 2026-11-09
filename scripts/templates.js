@@ -15,9 +15,9 @@ function getMealCategoryTemplate(imgSrc, imgAlt, category, mealsTemplates) {
     `;
 }
 
-function getMealTemplate(imgSrc, imgAlt, name, description, price){
+function getMealTemplate(mealId, imgSrc, imgAlt, name, description, price) {
     return `
-        <div class="meal_card">
+        <div id="meal_${mealId}" class="meal_card">
             <div class="meal_card_img_wrapper">
                 <img src="${imgSrc}" alt="${imgAlt}">
             </div>
@@ -27,7 +27,31 @@ function getMealTemplate(imgSrc, imgAlt, name, description, price){
             </div>
             <div class="meal_card_transaction_wrapper">
                 <p>${price}</p>
-                <button>Add to basket</button>
+                <button onclick="addMealToBasket('${mealId}')">Add to basket</button>
+            </div>
+        </div>
+    `;
+}
+
+function getBasketProductCardTemplate(mealId, mealName, amountInBasket, price) {
+    return `
+        <div id="product_${mealId}" class="basket_product_card">
+            <header class="basket_product_card_header">
+                <h3 id="basketProductCardHeading">${mealName}</h3>
+            </header>
+
+            <div class="basket_product_card_content_wrapper">
+                <div class="basket_product_card_meal_amount_wrapper">
+                    <button id="lowerMealAmountButton" class="meal_amount_button" onclick="removeMealFromBasket('${mealId}')">
+                        <img id="lowerMealAmountButtonImg" src="assets/icons/delete.svg" alt="">
+                    </button>
+                    <p id="mealAmount">${amountInBasket}</p>
+                    <button id="raiseMealAmountButton" class="meal_amount_button" onclick="addMealToBasket('${mealId}')">
+                        <img id="raiseMealAmountButtonImg" src="assets/icons/plus.svg" alt="">
+                    </button>
+                </div>
+
+                <p id="basketProductCardPrice">${price}</p>
             </div>
         </div>
     `;

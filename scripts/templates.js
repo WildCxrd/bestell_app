@@ -2,7 +2,9 @@ function getMealCategoryTemplate(imgSrc, imgAlt, category, mealsTemplates) {
     return `
         <section class="meal_category_section">
             <header class="meal_category_header">
-                <img src="${imgSrc}" alt="${imgAlt}">
+                <div class="meal_category_header_img_wrapper">
+                    <img src="${imgSrc}" alt="${imgAlt}">
+                </div>                
                 <h2>${category}</h2>
             </header>
 

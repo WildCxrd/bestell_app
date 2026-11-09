@@ -36,11 +36,14 @@ function setBasketAmountTexts(subtotal) {
     const subtotalText = document.getElementById("subtotalText");
     const deliveryFeeText = document.getElementById("deliveryFeeText");
     const totalText = document.getElementById("totalText");
+    const basketPayButton = document.getElementById("basketPayButton");
     const total = subtotal + deliveryFee;
+    const totalInEuros = formatPriceToEuros(total);
 
     subtotalText.innerHTML = formatPriceToEuros(subtotal);
     deliveryFeeText.innerHTML = formatPriceToEuros(deliveryFee);
-    totalText.innerHTML = formatPriceToEuros(total);
+    totalText.innerHTML = totalInEuros;
+    basketPayButton.innerHTML = `Buy now (${totalInEuros})`;
 }
 
 function addMealToBasket(mealId) {

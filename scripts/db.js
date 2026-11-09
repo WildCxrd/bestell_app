@@ -108,7 +108,8 @@ const CATEGORIES_WITH_MEALS = [
                 "imgAlt": "A small salad bowl.",
                 "name": "Mini green Salad",
                 "price": 7.90,
-                "description": "Green salad, Cucumber, Carrots, Parsley, Radishes"
+                "description": "Green salad, Cucumber, Carrots, Parsley, Radishes",
+                "amountInBasket": 0
             },
             {
                 "id": "m_11",

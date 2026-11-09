@@ -116,7 +116,15 @@ function getAllMealsFromLocalStorage() {
 }
 
 function getMealFromDb(mealId) {
-    for (const categoryWithMeals of CATEGORIES_WITH_MEALS) {
-        return categoryWithMeals.meals.find(meal => meal.id == mealId);
+    for (let categoriesWithMealsIndex = 0; categoriesWithMealsIndex < CATEGORIES_WITH_MEALS.length; categoriesWithMealsIndex++) {
+        const category = CATEGORIES_WITH_MEALS[categoriesWithMealsIndex];
+        
+        for (let mealsIndex = 0; mealsIndex < category.meals.length; mealsIndex++) {
+            const meal = category.meals[mealsIndex];
+            
+            if (meal.id == mealId) {
+                return meal;
+            }
+        }
     }
 }

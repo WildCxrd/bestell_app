@@ -17,7 +17,7 @@
 
     font-size: 2.5rem;
 
-    padding-left: 20%;
+    padding-left: max(20%, calc((50% - 720px) + 120px));
 }
 
 .meal_category_header_img_wrapper {
@@ -29,7 +29,7 @@
 
     position: absolute;
     bottom: 0px;
-    left: calc(20% - 100px);
+    left: max(calc(20% - 100px), calc((50% - 720px) + 20px));
 }
 
 .meals_wrapper {
@@ -121,6 +121,15 @@
     cursor: pointer;
 }
 
+/* @media screen and (min-width: 1440px) {
+    .meal_category_header>h2 {
+        padding-left: calc((50% - 720px) + 200px);
+    }
+
+    .meal_category_header_img_wrapper>img {
+        left: calc((50% - 720px) + 100px);
+    }
+} */
 
 @media screen and (max-width: 768px) {
     .meal_category_header>h2 {

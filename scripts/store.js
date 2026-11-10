@@ -25,6 +25,9 @@ function renderBasket() {
     } else {
         renderEmptyBasketTemplate();
     }
+
+    const mealsInBasketCount = getMealsInBasketCount(allMealsInLocalStorage);
+    setMenuBarBasketButtonMealCount(mealsInBasketCount);
 }
 
 function ensureRenderedFilledBaskedTemplate() {
@@ -61,20 +64,6 @@ function renderEmptyBasketTemplate() {
     basketContentWrapper.innerHTML = emptyBasketTemplate;
 }
 
-function setBasketAmountTexts(subtotal) {
-    const subtotalText = document.getElementById("subtotalText");
-    const deliveryFeeText = document.getElementById("deliveryFeeText");
-    const totalText = document.getElementById("totalText");
-    const basketPayButton = document.getElementById("basketPayButton");
-    const total = subtotal + deliveryFee;
-    const totalInEuros = formatPriceToEuros(total);
-
-    subtotalText.innerHTML = formatPriceToEuros(subtotal);
-    deliveryFeeText.innerHTML = formatPriceToEuros(deliveryFee);
-    totalText.innerHTML = totalInEuros;
-    basketPayButton.innerHTML = `Buy now (${totalInEuros})`;
-}
-
 function addMealToBasket(mealId) {
     let meal = getFromLocalStorage(mealId);
 
@@ -107,6 +96,50 @@ function removeMealFromBasket(mealId) {
     }
 }
 
+function placeOrder() {
+    clearLocalStorage();
+    renderBasket();
+    openOrderConfirmedDialog();
+}
+
+function openOrderConfirmedDialog() {
+    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
+    orderConfirmedDialog.showModal();
+}
+
+function closeOrderConfirmedDialog() {
+    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
+    orderConfirmedDialog.close();
+}
+
+function showMobileBasket() {
+    const basket = document.getElementById("basket");
+    basket.showModal();
+}
+
+//#region set functions
+function setBasketAmountTexts(subtotal) {
+    const subtotalText = document.getElementById("subtotalText");
+    const deliveryFeeText = document.getElementById("deliveryFeeText");
+    const totalText = document.getElementById("totalText");
+    const basketPayButton = document.getElementById("basketPayButton");
+    const total = subtotal + deliveryFee;
+    const totalInEuros = formatPriceToEuros(total);
+
+    subtotalText.innerHTML = formatPriceToEuros(subtotal);
+    deliveryFeeText.innerHTML = formatPriceToEuros(deliveryFee);
+    totalText.innerHTML = totalInEuros;
+    basketPayButton.innerHTML = `Buy now (${totalInEuros})`;
+    menuBarBasketButtonMealCount
+}
+
+function setMenuBarBasketButtonMealCount(mealsInBasketCount) {
+    const menuBarBasketButtonMealCount = document.getElementById("menuBarBasketButtonMealCount");
+    menuBarBasketButtonMealCount.innerHTML = mealsInBasketCount;
+}
+//#endregion
+
+//#region get functions
 function getLowerMealAmountButtonImgSrAndAlt(mealAmountInBasket) {
     if (mealAmountInBasket > 1) {
         return ["assets/icons/minus.svg", "A minus."];
@@ -155,18 +188,13 @@ function getMealFromDbFile(mealId) {
     }
 }
 
-function placeOrder() {
-    clearLocalStorage();
-    renderBasket();
-    openOrderConfirmedDialog();
-}
+function getMealsInBasketCount(meals) {
+    let mealsInBasketCount = 0;
 
-function openOrderConfirmedDialog() {
-    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
-    orderConfirmedDialog.showModal();
-}
+    meals.forEach(meal => {
+        mealsInBasketCount += meal.amountInBasket;
+    });
 
-function closeOrderConfirmedDialog() {
-    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
-    orderConfirmedDialog.close();
+    return mealsInBasketCount;
 }
+//#endregion

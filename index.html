@@ -57,14 +57,14 @@
             </div>
 
             <div class="basket_wrapper">
-                <div class="basket">
+                <dialog id="basket" class="basket" closedby="any">
                     <header>
                         <h2 class="basket_heading">Your Basket</h2>
                     </header>
 
                     <div id="basketContentWrapper" class="basket_content_wrapper">
                     </div>
-                </div>
+                </dialog>
             </div>
         </section>
 
@@ -77,6 +77,14 @@
             <p>Your food is on the way!</p>
         </dialog>
     </main>
+
+    <footer class="page_footer">
+        <div class="page_footer_infos">
+            <p>© 2026 BurgerHouse</p>
+            <p>Imprint</p>
+            <p>Cookie Preferences</p>
+        </div>
+    </footer>
 
     <menu class="mobile_menu_bar">
         <ul>
@@ -97,20 +105,13 @@
                 </a>
             </li>
             <li>
-                <a href="./index.html">
+                <button class="menu_bar_button" onclick="showMobileBasket()">
                     <img src="./assets/icons/shopping_cart.svg" alt="A shopping cart.">
-                </a>
+                    <p id="menuBarBasketButtonMealCount">12</p>
+                </button>
             </li>
         </ul>
     </menu>
-
-    <footer class="page_footer">
-        <div class="page_footer_infos">
-            <p>© 2026 BurgerHouse</p>
-            <p>Imprint</p>
-            <p>Cookie Preferences</p>
-        </div>
-    </footer>
 </body>
 
 </html>

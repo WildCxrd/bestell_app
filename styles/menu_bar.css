@@ -1,4 +1,30 @@
+#menuBarBasketButtonMealCount {
+    height: 30px;
+    width: 30px;
+
+    font-family: unset;
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: var(--bestell-app-orange);
+    background-color: var(--basket-beige-color);
+
+    padding: 5px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: absolute;
+    top: 15px;
+    right: 5%;
+}
+
 .mobile_menu_bar {
+    height: 100px;
     width: 100%;
 
     background-color: var(--ligh-black-color);
@@ -13,9 +39,13 @@
     align-items: center;
 }
 
-.mobile_menu_bar a>img {
+.mobile_menu_bar img {
     height: 30px;
     width: 30px;
+}
+
+.menu_bar_button {
+    all: unset;
 }
 
 

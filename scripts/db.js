@@ -53,7 +53,7 @@ const CATEGORIES_WITH_MEALS = [
                 "id": "m_5",
                 "imgSrc": "./assets/img/margherita.jpg",
                 "imgAlt": "A pizza margherita.",
-                "name": "Margherita",
+                "name": "Pizza Margherita",
                 "price": 11.90,
                 "description": "Tomato Sauce, Mozzarella",
                 "amountInBasket": 0
@@ -62,7 +62,7 @@ const CATEGORIES_WITH_MEALS = [
                 "id": "m_6",
                 "imgSrc": "./assets/img/chorizo.jpg",
                 "imgAlt": "A pizza chorizo.",
-                "name": "Chorizo",
+                "name": "Pizza Chorizo",
                 "price": 13.90,
                 "description": "Tomato slices, Mozzarella, Chorizo",
                 "amountInBasket": 0
@@ -71,7 +71,7 @@ const CATEGORIES_WITH_MEALS = [
                 "id": "m_7",
                 "imgSrc": "./assets/img/funghi.jpg",
                 "imgAlt": "A pizza funghi.",
-                "name": "Funghi",
+                "name": "Pizza Funghi",
                 "price": 12.90,
                 "description": "Red onion, Olives, Button Mushrooms, Mozzarella",
                 "amountInBasket": 0
@@ -80,7 +80,7 @@ const CATEGORIES_WITH_MEALS = [
                 "id": "m_8",
                 "imgSrc": "./assets/img/formaggi.jpg",
                 "imgAlt": "A pizza quattro formaggi.",
-                "name": "Quattro Formaggi with Chicken",
+                "name": "Pizza Quattro Formaggi with Chicken",
                 "price": 15.90,
                 "description": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano",
                 "amountInBasket": 0

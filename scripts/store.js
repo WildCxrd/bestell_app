@@ -154,3 +154,13 @@ function getMealFromDbFile(mealId) {
         }
     }
 }
+
+function openOrderConfirmedDialog(event) {
+    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
+    orderConfirmedDialog.showModal();
+}
+
+function closeOrderConfirmedDialog() {
+    const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
+    orderConfirmedDialog.close();
+}

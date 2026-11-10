@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/menu_bar.css">
     <link rel="stylesheet" href="styles/basket.css">
     <link rel="stylesheet" href="styles/scrollbar.css">
+    <link rel="stylesheet" href="styles/order_confirmed_dialog.css">
 
     <script src="scripts/db.js"></script>
     <script src="scripts/utils.js"></script>
@@ -66,6 +67,15 @@
                 </div>
             </div>
         </section>
+
+        <dialog id="orderConfirmedDialog" class="order_confirmed_dialog" closedby="any">
+            <button id="closeOrderConfiremdDialogButton" onclick="closeOrderConfirmedDialog()">
+                <img src="assets/icons/close.svg" alt="A 'x'.">
+            </button>
+            <img src="assets/icons/order_truck.svg" alt="A delivery truck.">
+            <h2>Order confirmed!</h2>
+            <p>Your food is on the way!</p>
+        </dialog>
     </main>
 
     <menu class="mobile_menu_bar">

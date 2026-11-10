@@ -3,8 +3,6 @@
 
     background-color: var(--ligh-black-color);
 
-    padding: 2em;
-
     position: sticky;
     bottom: 0;
 }
@@ -24,5 +22,17 @@
 @media screen and (min-width: 851px) {
     .mobile_menu_bar {
         display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .mobile_menu_bar {
+        padding: 2em 8%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mobile_menu_bar {
+        padding: 2em;
     }
 }

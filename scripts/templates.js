@@ -56,3 +56,38 @@ function getBasketProductCardTemplate(mealId, mealName, amountInBasket, price, l
         </div>
     `;
 }
+
+function getFilledBasketTemplate() {
+    return `
+        <div id="basketProductCardsWrapper">
+        </div>
+
+        <div class="basket_amounts">
+            <div class="basket_amount_wrapper">
+                <p>Subtotal</p>
+                <p id="subtotalText">x,y€</p>
+            </div>
+            <div class="basket_amount_wrapper">
+                <p>Delivery fee</p>
+                <p id="deliveryFeeText">x,y€</p>
+            </div>
+            <hr>
+            <div class="basket_amount_wrapper">
+                <p>Total</p>
+                <p id="totalText">x,y€</p>
+            </div>
+        </div>
+
+        <button id="basketPayButton">Buy now (x,y€)</button>
+    `;
+}
+
+function getEmptyBasketTemplate() {
+    return `
+        <div class="empty_basket_wrapper">
+            <p>Nothing here yet.</p>
+            <p>Go ahead and choose something delicious!</p>
+            <img src="assets/icons/empty_basket_shopping_cart.svg" alt="A shopping cart.">
+        </div>
+    `;
+}

@@ -44,7 +44,7 @@
 
 .basket {
     height: 800px;
-    width: 100%;
+    width: 435px;
 
     background-color: var(--ligh-black-color);
 
@@ -52,19 +52,22 @@
     border-bottom-left-radius: 30px;
 
     margin-top: 100px;
+    padding: 60px 30px;
 
     position: sticky;
     top: 0px;
     left: calc(100% - 435px);
 
     z-index: 99;
+
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 .basket_content_wrapper {
     height: 100%;
     width: 100%;
-
-    padding: 60px 30px;
 
     display: flex;
     flex-direction: column;
@@ -131,6 +134,24 @@
     justify-content: space-between;
 }
 
+.empty_basket_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty_basket_wrapper>p {
+    color: var(--basket-beige-color);
+
+    font-size: 1.5rem;
+    line-height: 120%;
+    text-align: center;
+}
+
+.empty_basket_wrapper>img {
+    margin-top: 80px;
+}
+
 
 @media screen and (min-width: 1441px) {
     .basket {
@@ -153,6 +174,10 @@
 
     #basketProductCardPrice {
         font-size: 1.25rem;
+    }
+
+    .basket {
+        width: 250px;
     }
 
     .basket_heading {

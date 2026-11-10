@@ -17,21 +17,48 @@ function renderCategoriesWithMeals() {
 }
 
 function renderBasket() {
-    const basketProductCardsWrapper = document.getElementById("basketProductCardsWrapper");
     const allMealsInLocalStorage = getAllMealsFromLocalStorage();
 
+    if (allMealsInLocalStorage.length > 0) {
+        ensureRenderedFilledBaskedTemplate();
+        renderBasketMeals(allMealsInLocalStorage);
+    } else {
+        renderEmptyBasketTemplate();
+    }
+}
+
+function ensureRenderedFilledBaskedTemplate() {
+    const basketProductCardsWrapper = document.getElementById("basketProductCardsWrapper");
+
+    if (basketProductCardsWrapper == null) {
+        const basketContentWrapper = document.getElementById("basketContentWrapper");
+        const filledBasketTemplate = getFilledBasketTemplate();
+        basketContentWrapper.innerHTML = filledBasketTemplate;
+    }
+}
+
+function renderBasketMeals(meals) {
+    const basketProductCardsWrapper = document.getElementById("basketProductCardsWrapper");
     basketProductCardsWrapper.innerHTML = "";
 
     let subtotal = 0.0;
 
-    allMealsInLocalStorage.forEach(meal => {
+    meals.forEach(meal => {
         subtotal += meal.price * meal.amountInBasket;
+
         const lowerMealAmountButtonImgSrcAndAlt = getLowerMealAmountButtonImgSrAndAlt(meal.amountInBasket);
-        basketProductCardsWrapper.innerHTML += getBasketProductCardTemplate(meal.id, meal.name, meal.amountInBasket, 
+        basketProductCardsWrapper.innerHTML += getBasketProductCardTemplate(meal.id, meal.name, meal.amountInBasket,
             formatPriceToEuros(meal.price), lowerMealAmountButtonImgSrcAndAlt[0], lowerMealAmountButtonImgSrcAndAlt[1]);
     });
 
     setBasketAmountTexts(subtotal);
+}
+
+function renderEmptyBasketTemplate() {
+    const basketContentWrapper = document.getElementById("basketContentWrapper");
+    const emptyBasketTemplate = getEmptyBasketTemplate();
+
+    basketContentWrapper.innerHTML = emptyBasketTemplate;
 }
 
 function setBasketAmountTexts(subtotal) {
@@ -55,7 +82,7 @@ function addMealToBasket(mealId) {
         meal.amountInBasket++;
     }
     else {
-        meal = getMealFromDb(mealId);
+        meal = getMealFromDbFile(mealId);
         meal.amountInBasket++;
     }
 
@@ -111,17 +138,16 @@ function getAllMealsFromLocalStorage() {
         }
     });
 
-    // return allProducts.toSorted((bookOne, bookTwo) => bookOne.publishedYear - bookTwo.publishedYear);
     return allMeals;
 }
 
-function getMealFromDb(mealId) {
+function getMealFromDbFile(mealId) {
     for (let categoriesWithMealsIndex = 0; categoriesWithMealsIndex < CATEGORIES_WITH_MEALS.length; categoriesWithMealsIndex++) {
         const category = CATEGORIES_WITH_MEALS[categoriesWithMealsIndex];
-        
+
         for (let mealsIndex = 0; mealsIndex < category.meals.length; mealsIndex++) {
             const meal = category.meals[mealsIndex];
-            
+
             if (meal.id == mealId) {
                 return meal;
             }

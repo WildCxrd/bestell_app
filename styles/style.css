@@ -20,8 +20,7 @@ body {
     color: white;
     background-color: var(--bestell-app-orange);
 
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding: 60px 20px 20px 20px;
 
     display: flex;
     justify-content: center
@@ -42,6 +41,23 @@ body {
 
 @media screen and (max-width: 425px) {
     .page_footer {
-        display: none;
+        padding: 32px;
+    }
+
+    .page_footer_infos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page_footer_infos :nth-child(1) {
+        order: 3;
+    }
+
+    .page_footer_infos :nth-child(2) {
+        order: 1;
+    }
+
+    .page_footer_infos :nth-child(3) {
+        order: 2;
     }
 }

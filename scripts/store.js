@@ -83,7 +83,7 @@ function addMealToBasket(mealId) {
     }
     else {
         meal = getMealFromDbFile(mealId);
-        meal.amountInBasket++;
+        meal.amountInBasket = 1;
     }
 
     saveInLocalStorage(meal.id, meal);

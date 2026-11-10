@@ -44,12 +44,14 @@
 
 .basket {
     height: 800px;
-    width: 435px;
+    width: 100%;
 
     background-color: var(--ligh-black-color);
 
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+
+    margin-top: 100px;
 
     position: sticky;
     top: 0px;
@@ -133,5 +135,37 @@
 @media screen and (min-width: 1441px) {
     .basket {
         left: calc((50% + 720px) - 435px);
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    #basketPayButton {
+        font-size: 1.2rem;
+    }
+
+    #basketProductCardHeading {
+        font-size: 1.25rem;
+    }
+
+    #mealAmount {
+        font-size: 1.25rem;
+    }
+
+    #basketProductCardPrice {
+        font-size: 1.25rem;
+    }
+
+    .basket_heading {
+        font-size: 1.5rem;
+    }
+
+    .basket_amount_wrapper {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .basket {
+        display: none;
     }
 }

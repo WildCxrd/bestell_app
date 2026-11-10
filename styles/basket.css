@@ -107,7 +107,7 @@
 .basket_product_card_meal_amount_wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .meal_amount_button {
@@ -203,7 +203,7 @@
     }
 
     .basket_product_card_meal_amount_wrapper {
-        gap: 4px;
+        gap: 8px;
     }
 }
 

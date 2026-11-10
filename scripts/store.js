@@ -155,7 +155,13 @@ function getMealFromDbFile(mealId) {
     }
 }
 
-function openOrderConfirmedDialog(event) {
+function placeOrder() {
+    clearLocalStorage();
+    renderBasket();
+    openOrderConfirmedDialog();
+}
+
+function openOrderConfirmedDialog() {
     const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
     orderConfirmedDialog.showModal();
 }

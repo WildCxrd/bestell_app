@@ -13,3 +13,7 @@ function getFromLocalStorage(key) {
 function removeFromLocalStorage(key) {
     localStorage.removeItem(key);
 }
+
+function clearLocalStorage(){
+    localStorage.clear();
+}

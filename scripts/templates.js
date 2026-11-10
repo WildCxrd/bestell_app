@@ -78,7 +78,7 @@ function getFilledBasketTemplate() {
             </div>
         </div>
 
-        <button id="basketPayButton" onclick="openOrderConfirmedDialog(event)">Buy now (x,y€)</button>
+        <button id="basketPayButton" onclick="placeOrder()">Buy now (x,y€)</button>
     `;
 }
 

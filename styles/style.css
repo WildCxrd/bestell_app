@@ -34,6 +34,10 @@ body {
 }
 
 @media screen and (max-width: 660px) {
+    .page_header {
+        padding: 20px;
+    }
+
     .burger_menu {
         display: none;
     }

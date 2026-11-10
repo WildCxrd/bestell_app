@@ -16,9 +16,12 @@
 }
 
 #mealAmount {
+    width: 20px;
+
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 120%;
+    text-align: center;
 }
 
 #basketProductCardPrice {
@@ -104,17 +107,24 @@
 .basket_product_card_meal_amount_wrapper {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
 }
 
 .meal_amount_button {
     all: unset;
 
-    width: 13px;
+    width: 4px;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     cursor: pointer;
+}
+
+.meal_amount_button>img {
+    align-self: center;
+    margin-top: 4px;
 }
 
 .basket_amounts {
@@ -186,6 +196,14 @@
 
     .basket_amount_wrapper {
         font-size: 1.25rem;
+    }
+
+    .empty_basket_wrapper>p {
+        font-size: 1.25rem;
+    }
+
+    .basket_product_card_meal_amount_wrapper {
+        gap: 4px;
     }
 }
 

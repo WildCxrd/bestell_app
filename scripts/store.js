@@ -102,6 +102,7 @@ function placeOrder() {
     openOrderConfirmedDialog();
 }
 
+//#region dialog functions
 function openOrderConfirmedDialog() {
     const orderConfirmedDialog = document.getElementById("orderConfirmedDialog");
     orderConfirmedDialog.showModal();
@@ -112,10 +113,16 @@ function closeOrderConfirmedDialog() {
     orderConfirmedDialog.close();
 }
 
-function showMobileBasket() {
+function showBasketDialog() {
     const basket = document.getElementById("basket");
     basket.showModal();
 }
+
+function closeBasketDialog() {
+    const basket = document.getElementById("basket");
+    basket.close();
+}
+//#endregion
 
 //#region set functions
 function setBasketAmountTexts(subtotal) {

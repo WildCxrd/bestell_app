@@ -58,7 +58,10 @@
 
             <div class="basket_wrapper">
                 <dialog id="basket" class="basket" closedby="any">
-                    <header>
+                    <header class="basket_header">
+                        <button id="closeBasketDialogButton" onclick="closeBasketDialog()">
+                            <img src="assets/icons/close.svg" alt="A cross.">
+                        </button>
                         <h2 class="basket_heading">Your Basket</h2>
                     </header>
 
@@ -105,7 +108,7 @@
                 </a>
             </li>
             <li>
-                <button class="menu_bar_button" onclick="showMobileBasket()">
+                <button class="menu_bar_button" onclick="showBasketDialog()">
                     <img src="./assets/icons/shopping_cart.svg" alt="A shopping cart.">
                     <p id="menuBarBasketButtonMealCount">12</p>
                 </button>

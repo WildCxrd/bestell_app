@@ -39,15 +39,45 @@
     align-items: center;
 }
 
-.mobile_menu_bar img {
+.menu_bar_link {
     height: 30px;
     width: 30px;
+
+    border-radius: 5px;
+
+    position: relative;
+    display: flex;
+}
+
+.menu_bar_link>img {
+    height: 30px;
+    width: 30px;
+
+    padding: 4px;
+
+    position: absolute;
+}
+
+.menu_bar_link:active {
+    background-color: white;
+}
+
+.menu_bar_link:active .default_svg {
+    opacity: 0;
+}
+
+.menu_bar_link:active .active_svg {
+    opacity: 100;
+}
+
+.active_svg {
+    opacity: 0;
 }
 
 .menu_bar_button {
     all: unset;
+    display: flex;
 }
-
 
 @media screen and (min-width: 851px) {
     .mobile_menu_bar {

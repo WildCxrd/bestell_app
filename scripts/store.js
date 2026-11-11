@@ -27,6 +27,7 @@ function renderBasket() {
     }
 
     const mealsInBasketCount = getMealsInBasketCount(allMealsInLocalStorage);
+    setMenuBarBasketButtonImg(mealsInBasketCount);
     setMenuBarBasketButtonMealCount(mealsInBasketCount);
 }
 
@@ -139,6 +140,18 @@ function setBasketAmountTexts(subtotal) {
     totalText.innerHTML = totalInEuros;
     basketPayButton.innerHTML = `Buy now (${totalInEuros})`;
     menuBarBasketButtonMealCount
+}
+
+function setMenuBarBasketButtonImg(mealsInBasketCount) {
+    const menuBarBasketButtonImg = document.getElementById("menuBarBasketButtonImg");
+
+    if (mealsInBasketCount > 0) {
+        menuBarBasketButtonImg.src = "./assets/icons/shopping_cart_orange.svg";
+        menuBarBasketButtonImg.alt = "An orange shopping cart icon."
+    } else {
+        menuBarBasketButtonImg.src = "./assets/icons/shopping_cart.svg";
+        menuBarBasketButtonImg.alt = "A white shopping cart icon."
+    }
 }
 
 function setMenuBarBasketButtonMealCount(mealsInBasketCount) {

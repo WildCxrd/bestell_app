@@ -99,6 +99,7 @@ function removeMealFromBasket(mealId) {
 function placeOrder() {
     clearLocalStorage();
     renderBasket();
+    closeBasketDialog();
     openOrderConfirmedDialog();
 }
 

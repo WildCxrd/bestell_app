@@ -34,20 +34,12 @@ body {
 }
 
 @media screen and (max-width: 660px) {
-    .page_header {
-        padding: 20px;
-    }
-
     .burger_menu {
         display: none;
     }
-}
 
-@media screen and (max-width: 425px) {
     .page_header {
-        position: sticky;
-        top: 0px;
-        z-index: 99;
+        padding: 20px;
     }
 
     .page_footer {
@@ -69,5 +61,13 @@ body {
 
     .page_footer_infos :nth-child(3) {
         order: 2;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .page_header {
+        position: sticky;
+        top: 0px;
+        z-index: 99;
     }
 }

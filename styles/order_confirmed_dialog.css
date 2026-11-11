@@ -3,7 +3,7 @@
 
     align-self: flex-end;
 
-        cursor: pointer;
+    cursor: pointer;
 }
 
 .order_confirmed_dialog {
@@ -33,4 +33,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    .order_confirmed_dialog>h2 {
+        font-size: 2rem;
+    }
+
+    .order_confirmed_dialog>p {
+        font-size: 1.25rem;
+    }
 }

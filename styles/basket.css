@@ -46,6 +46,11 @@
     cursor: pointer;
 }
 
+#basketPayButton:focus-visible {
+    outline: 1px solid white;
+    outline-offset: 2px;
+}
+
 #closeBasketDialogButton {
     all: unset;
 
@@ -129,6 +134,7 @@
 .meal_amount_button {
     all: unset;
 
+    height: 20px;
     width: 20px;
 
     display: flex;
@@ -136,6 +142,11 @@
     align-items: center;
 
     cursor: pointer;
+}
+
+.meal_amount_button:focus-visible {
+    outline: 1px solid black;
+    outline-offset: 2px;
 }
 
 .meal_amount_button>img {

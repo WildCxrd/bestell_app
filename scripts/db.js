@@ -12,7 +12,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Veggie mushroom black burger",
                 "price": 16.90,
                 "description": "Mixed green salad, Tomatoes, Edamame, Mushrooms",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_2",
@@ -21,7 +22,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "All meat burger",
                 "price": 15.90,
                 "description": "Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ souse",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_3",
@@ -30,7 +32,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Beef red burger",
                 "price": 14.90,
                 "description": "Beef, Cheese, Tomatoes, Lettuce, Onion",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_4",
@@ -39,7 +42,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Big chicken burger",
                 "price": 15.90,
                 "description": "Chicken, Cheese, Tomatoes, Lettuce, Onion, Bell pepper",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             }
         ]
     },
@@ -56,7 +60,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Pizza Margherita",
                 "price": 11.90,
                 "description": "Tomato Sauce, Mozzarella",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_6",
@@ -65,7 +70,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Pizza Chorizo",
                 "price": 13.90,
                 "description": "Tomato slices, Mozzarella, Chorizo",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_7",
@@ -74,7 +80,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Pizza Funghi",
                 "price": 12.90,
                 "description": "Red onion, Olives, Button Mushrooms, Mozzarella",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_8",
@@ -83,7 +90,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Pizza Quattro Formaggi with Chicken",
                 "price": 15.90,
                 "description": "Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             }
         ]
     },
@@ -100,7 +108,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Warm beef arugula salad",
                 "price": 16.90,
                 "description": "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_10",
@@ -109,7 +118,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Mini green Salad",
                 "price": 7.90,
                 "description": "Green salad, Cucumber, Carrots, Parsley, Radishes",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_11",
@@ -118,7 +128,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Green Salad with sea food",
                 "price": 16.90,
                 "description": "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             },
             {
                 "id": "m_12",
@@ -127,7 +138,8 @@ const CATEGORIES_WITH_MEALS = [
                 "name": "Vegan green salad with tofu",
                 "price": 14.90,
                 "description": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
-                "amountInBasket": 0
+                "amountInBasket": 0,
+                "addedToBasketTimestamp": 0
             }
         ]
     }

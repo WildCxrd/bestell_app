@@ -79,13 +79,13 @@
     display: flex;
 }
 
-@media screen and (min-width: 851px) {
+@media screen and (min-width: 901px) {
     .mobile_menu_bar {
         display: none;
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     .mobile_menu_bar {
         padding: 2em 8%;
     }

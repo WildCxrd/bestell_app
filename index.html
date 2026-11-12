@@ -1,14 +1,126 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
+
+    <link rel="shortcut icon" href="assets/icons/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/standard.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/meals.css">
+    <link rel="stylesheet" href="styles/menu_bar.css">
+    <link rel="stylesheet" href="styles/basket.css">
+    <link rel="stylesheet" href="styles/scrollbar.css">
+    <link rel="stylesheet" href="styles/order_confirmed_dialog.css">
+
+    <script src="scripts/db.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/templates.js"></script>
+    <script src="scripts/store.js"></script>
 </head>
 
-<body>
+<body onload="initialize()">
+    <header class="page_header">
+        <img src="assets/icons/logo.svg"
+            alt="Eine Tüte mit einer Gabel darauf. Daneben der Text Bestell APP; beide Wörter untereinander positioniert.">
+        <menu class="burger_menu">
+            <img src="assets/icons/burger_menu.svg" alt="Drei Balken übereinander positioniert.">
+        </menu>
+    </header>
 
+    <main>
+        <section class="hero_section">
+            <div class="hero_image_wrapper">
+                <img src="./assets/img/burger_house_logo.png" alt="Ein gezeichneter Burger." class="burger_house_logo">
+            </div>
+            <div class="hero_text_wrapper">
+                <div class="hero_headline">
+                    <h1><span>Burger</span>House</h1>
+                    <div class="ratings_wrapper">
+                        <img src="./assets/icons/star.svg" alt="Ein schwarzer Stern." class="ratings_star_img">
+                        <p class="ratings_grade_text">4,1</p>
+                        <p class="ratings_total_count_text">(317)</p>
+                    </div>
+                </div>
+                <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
+            </div>
+        </section>
+
+        <section class="meal_categories_and_basket_wrapper">
+            <div id="mealCategoriesSection">
+            </div>
+
+            <div class="basket_wrapper">
+                <dialog id="basket" class="basket" closedby="any">
+                    <header class="basket_header">
+                        <button id="closeBasketDialogButton" onclick="closeBasketDialog()">
+                            <img src="assets/icons/close.svg" alt="A cross.">
+                        </button>
+                        <h2 class="basket_heading">Your Basket</h2>
+                    </header>
+
+                    <div id="basketContentWrapper" class="basket_content_wrapper">
+                    </div>
+                </dialog>
+            </div>
+        </section>
+
+        <dialog id="orderConfirmedDialog" class="order_confirmed_dialog" closedby="any">
+            <button id="closeOrderConfiremdDialogButton" onclick="closeOrderConfirmedDialog()">
+                <img src="assets/icons/close.svg" alt="A 'x'.">
+            </button>
+            <img src="assets/icons/order_truck.svg" alt="A delivery truck.">
+            <h2>Order confirmed!</h2>
+            <p>Your food is on the way!</p>
+        </dialog>
+    </main>
+
+    <footer class="page_footer">
+        <div class="page_footer_infos">
+            <p>© 2026 BurgerHouse</p>
+            <p>Imprint</p>
+            <p>Cookie Preferences</p>
+        </div>
+    </footer>
+
+    <menu class="mobile_menu_bar">
+        <ul>
+            <li>
+                <a class="menu_bar_link" href="./index.html">
+                    <img src="./assets/icons/home.svg" alt="A house.">
+                    <img class="active_svg" src="./assets/icons/home_orange.svg" alt="An orange house.">
+                </a>
+
+            </li>
+            <li>
+                <a class="menu_bar_link">
+                    <img src="./assets/icons/person.svg" alt="A white silhouette of a person.">
+                    <img class="active_svg" src="./assets/icons/person_orange.svg"
+                        alt="An orange silhouette of a person.">
+                </a>
+            </li>
+            <li>
+                <a class="menu_bar_link">
+                    <img src="./assets/icons/favicon.svg" alt="A white paper bag with a fork on it.">
+                    <img class="active_svg" src="./assets/icons/favicon_orange.svg"
+                        alt="An orange paper bag with a fork on it.">
+                </a>
+            </li>
+            <li>
+                <button class="menu_bar_button" onclick="showBasketDialog()">
+                    <img id="menuBarBasketButtonImg" src="./assets/icons/shopping_cart.svg"
+                        alt="A white shopping cart.">
+                    <p id="menuBarBasketButtonMealCount">12</p>
+                </button>
+            </li>
+        </ul>
+    </menu>
 </body>
 
 </html>

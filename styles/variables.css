@@ -1,3 +1,10 @@
 :root {
+  --bestell-app-orange: rgba(231, 108, 31, 1);
+  --background-orange: rgba(231, 108, 31, 0.5);
+  --ligh-black-color: rgba(54, 53, 52, 1);
+  --basket-beige-color: rgba(253, 234, 220, 1);
 
+  --sb-track-color: #363534;
+  --sb-thumb-color: #e7c3ad;
+  --sb-size: 8px;
 }

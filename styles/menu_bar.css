@@ -1,0 +1,98 @@
+#menuBarBasketButtonMealCount {
+    height: 30px;
+    width: 30px;
+
+    font-family: unset;
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: var(--bestell-app-orange);
+    background-color: var(--basket-beige-color);
+
+    padding: 5px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: absolute;
+    top: 15px;
+    right: 5%;
+}
+
+.mobile_menu_bar {
+    height: 100px;
+    width: 100%;
+
+    background-color: var(--ligh-black-color);
+
+    position: sticky;
+    bottom: 0;
+}
+
+.mobile_menu_bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_bar_link {
+    height: 30px;
+    width: 30px;
+
+    border-radius: 5px;
+
+    position: relative;
+    display: flex;
+}
+
+.menu_bar_link>img {
+    height: 30px;
+    width: 30px;
+
+    padding: 4px;
+
+    position: absolute;
+}
+
+.menu_bar_link:active {
+    background-color: white;
+}
+
+.menu_bar_link:active .default_svg {
+    opacity: 0;
+}
+
+.menu_bar_link:active .active_svg {
+    opacity: 100;
+}
+
+.active_svg {
+    opacity: 0;
+}
+
+.menu_bar_button {
+    all: unset;
+    display: flex;
+}
+
+@media screen and (min-width: 851px) {
+    .mobile_menu_bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .mobile_menu_bar {
+        padding: 2em 8%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mobile_menu_bar {
+        padding: 2em;
+    }
+}

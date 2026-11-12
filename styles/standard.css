@@ -11,3 +11,11 @@ html {
 a {
     list-style-type: none;
 }
+
+ul {
+    padding-inline-start: unset;
+}
+
+li {
+    list-style-type: none;
+}

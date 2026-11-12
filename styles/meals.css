@@ -1,0 +1,202 @@
+.meal_categories_and_basket_wrapper {
+    width: 100%;
+
+    padding: 0px calc(50% - 720px);
+
+    display: flex;
+    justify-content: center;
+}
+
+.meal_category_header {
+    width: 100%;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    left: 0px;
+}
+
+.meal_category_header>h2 {
+    width: 100%;
+
+    background-color: var(--bestell-app-orange);
+
+    font-size: 2.5rem;
+
+    padding-left: max(150px, calc((50% - 720px) + 150px));
+}
+
+.meal_category_header_img_wrapper {
+    height: 30px;
+}
+
+.meal_category_header_img_wrapper>img {
+    height: 90px;
+
+    position: absolute;
+    bottom: 0px;
+    left: max(50px, calc((50% - 720px) + 50px));
+}
+
+.meals_wrapper {
+    padding: 2em max(2em, calc(50% - 720px));
+    padding-top: 8em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.meal_card {
+    height: 150px;
+    width: min(725px, 100%);
+    background-color: rgba(253, 234, 220, 1);
+
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.meal_card_img_wrapper {
+    height: 100%;
+    min-width: 200px;
+}
+
+.meal_card_img_wrapper>img {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 12px;
+
+    object-fit: cover;
+}
+
+.meal_card_text_wrapper {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meal_card_text_wrapper>h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 100%;
+}
+
+.meal_card_text_wrapper>p {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.meal_card_transaction_wrapper {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.meal_card_transaction_wrapper>p {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.meal_card_transaction_wrapper>button {
+    all: unset;
+
+    width: 115px;
+
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+
+    color: black;
+    background-color: rgba(255, 255, 255, 1);
+
+    padding: 5px 8px;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: color 255ms ease-in-out;
+}
+
+.meal_card_transaction_wrapper>button:hover,
+.meal_card_transaction_wrapper>button:focus-visible {
+    color: var(--bestell-app-orange);
+
+    transition: color 255ms ease-in-out;
+}
+
+.meal_card_transaction_wrapper>button:focus-visible {
+    outline: 1px solid black;
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 1260px) {
+    .meal_card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .meal_category_header>h2 {
+        width: 100%;
+
+        font-size: 2rem;
+        text-align: center;
+
+        padding-left: unset;
+    }
+
+    .meal_category_header_img_wrapper {
+        height: 50px;
+    }
+
+    .meal_category_header_img_wrapper>img {
+        height: 60px;
+        width: 60px;
+
+        left: calc(50% - 30px);
+        top: 0px;
+    }
+
+    .meal_card {
+        height: auto;
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .meal_card_img_wrapper {
+        height: 86px;
+        width: 100%;
+    }
+
+    .meal_card_transaction_wrapper {
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .meal_card>img {
+        width: 100%;
+    }
+}

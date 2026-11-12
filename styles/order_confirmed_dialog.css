@@ -1,0 +1,47 @@
+#closeOrderConfiremdDialogButton {
+    all: unset;
+
+    align-self: flex-end;
+
+    cursor: pointer;
+}
+
+.order_confirmed_dialog {
+    color: var(--basket-beige-color);
+    background-color: var(--ligh-black-color);
+
+    padding: 32px 40px;
+
+    border-radius: 30px;
+
+    margin: auto;
+}
+
+.order_confirmed_dialog>h2 {
+    font-size: 2.625rem;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.order_confirmed_dialog>p {
+    font-size: 1.8125rem;
+    font-weight: bold;
+    line-height: 120%;
+}
+
+.order_confirmed_dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 425px) {
+    .order_confirmed_dialog>h2 {
+        font-size: 2rem;
+    }
+
+    .order_confirmed_dialog>p {
+        font-size: 1.25rem;
+    }
+}

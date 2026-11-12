@@ -1,0 +1,73 @@
+body {
+    font-family: 'Palanquin';
+}
+
+.page_header {
+    width: 100%;
+
+    background-color: var(--bestell-app-orange);
+
+    padding: 40px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_footer {
+    width: 100%;
+
+    color: white;
+    background-color: var(--bestell-app-orange);
+
+    padding: 60px 20px 20px 20px;
+
+    display: flex;
+    justify-content: center
+}
+
+.page_footer_infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 72px;
+}
+
+@media screen and (max-width: 660px) {
+    .burger_menu {
+        display: none;
+    }
+
+    .page_header {
+        padding: 20px;
+    }
+
+    .page_footer {
+        padding: 32px;
+    }
+
+    .page_footer_infos {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .page_footer_infos :nth-child(1) {
+        order: 3;
+    }
+
+    .page_footer_infos :nth-child(2) {
+        order: 1;
+    }
+
+    .page_footer_infos :nth-child(3) {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .page_header {
+        position: sticky;
+        top: 0px;
+        z-index: 99;
+    }
+}

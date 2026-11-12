@@ -76,6 +76,10 @@ function addMealToBasket(mealId) {
         meal.amountInBasket = 1;
     }
 
+    if (meal.addedToBasketTimestamp == 0) {
+        meal.addedToBasketTimestamp = Date.now();
+    }
+
     saveInLocalStorage(meal.id, meal);
     renderBasket();
 }
@@ -192,7 +196,7 @@ function getAllMealsFromLocalStorage() {
         }
     });
 
-    return allMeals;
+    return allMeals.toSorted((m1, m2) => m1.addedToBasketTimestamp - m2.addedToBasketTimestamp);
 }
 
 function getMealFromDbFile(mealId) {

@@ -136,8 +136,7 @@
 }
 
 .meal_card_transaction_wrapper>button:hover,
-.meal_card_transaction_wrapper>button:focus-visible
- {
+.meal_card_transaction_wrapper>button:focus-visible {
     color: var(--bestell-app-orange);
 
     transition: color 255ms ease-in-out;
@@ -146,6 +145,12 @@
 .meal_card_transaction_wrapper>button:focus-visible {
     outline: 1px solid black;
     outline-offset: 2px;
+}
+
+@media screen and (max-width: 1260px) {
+    .meal_card {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {

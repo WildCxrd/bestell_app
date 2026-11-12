@@ -153,34 +153,13 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    .meal_category_header>h2 {
-        width: 100%;
-        font-size: 2rem;
-    }
-
-    .meal_category_header>img {
-        height: 60px;
-        width: 60px;
-
-        position: absolute;
-        top: -45px;
-        left: calc(50% - 30px);
-    }
-
-    .meal_card>img {
-        width: 100%;
-    }
-
-    .meal_card_text_wrapper>h3 {
-        font-size: 1.5rem;
-        line-height: 100%;
-    }
-}
-
 @media screen and (max-width: 850px) {
     .meal_category_header>h2 {
+        width: 100%;
+
+        font-size: 2rem;
         text-align: center;
+
         padding-left: unset;
     }
 
@@ -213,5 +192,11 @@
 
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .meal_card>img {
+        width: 100%;
     }
 }

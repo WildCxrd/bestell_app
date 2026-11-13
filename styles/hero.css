@@ -1,5 +1,5 @@
 .hero_section {
-    padding: 0px max(0px, calc(50% - 720px));
+    padding: 0px max(0px, var(--content-limitation-calculation));
 }
 
 .hero_image_wrapper {
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 768px) {
     .hero_section {
-        padding: 1em max(1em, calc(50% - 720px));
+        padding: 1em max(1em, var(--content-limitation-calculation));
     }
 
     .hero_image_wrapper {

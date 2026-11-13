@@ -1,7 +1,7 @@
 .meal_categories_and_basket_wrapper {
     width: 100%;
 
-    padding: 0px calc(50% - 720px);
+    padding: 0px var(--content-limitation-calculation);
 
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
 }
 
 .meals_wrapper {
-    padding: 2em max(2em, calc(50% - 720px));
+    padding: 2em max(2em, var(--content-limitation-calculation));
     padding-top: 8em;
 
     display: flex;

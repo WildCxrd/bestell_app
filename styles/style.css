@@ -7,7 +7,7 @@ body {
 
     background-color: var(--bestell-app-orange);
 
-    padding: 40px 80px;
+    padding: 40px max(80px, var(--content-limitation-calculation));
 
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ body {
     color: white;
     background-color: var(--bestell-app-orange);
 
-    padding: 60px 20px 20px 20px;
+    padding: 60px max(80px, var(--content-limitation-calculation)) 20px max(80px, var(--content-limitation-calculation));
 
     display: flex;
     justify-content: center

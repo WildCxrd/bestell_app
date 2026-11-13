@@ -7,4 +7,6 @@
   --sb-track-color: #363534;
   --sb-thumb-color: #e7c3ad;
   --sb-size: 8px;
+
+  --content-limitation-calculation: calc(50% - 720px);
 }
